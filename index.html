@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pini Hub</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Pretendard:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Pretendard:wght@300;400;600;800&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
@@ -13,11 +16,18 @@
             --card-hover: rgba(255, 255, 255, 0.1);
             --text-primary: #f8fafc;
             --text-secondary: #94a3b8;
-            --accent-1: #3b82f6; /* Blue for Card */
-            --accent-2: #10b981; /* Green for Edu */
-            --accent-3: #f59e0b; /* Amber for Eye */
-            --accent-4: #ec4899; /* Pink for Hanja */
-            --accent-5: #8b5cf6; /* Purple for Periodic */
+            --accent-1: #3b82f6;
+            /* Blue for Card */
+            --accent-2: #10b981;
+            /* Green for Edu */
+            --accent-3: #f59e0b;
+            /* Amber for Eye */
+            --accent-4: #ec4899;
+            /* Pink for Hanja */
+            --accent-5: #8b5cf6;
+            /* Purple for Periodic */
+            --accent-6: #14b8a6;
+            /* Teal for Jump Game */
         }
 
         * {
@@ -88,11 +98,29 @@
         }
 
         /* Animation Delays for Staggered Effect */
-        .hub-card:nth-child(1) { animation-delay: 0.1s; }
-        .hub-card:nth-child(2) { animation-delay: 0.2s; }
-        .hub-card:nth-child(3) { animation-delay: 0.3s; }
-        .hub-card:nth-child(4) { animation-delay: 0.4s; }
-        .hub-card:nth-child(5) { animation-delay: 0.5s; }
+        .hub-card:nth-child(1) {
+            animation-delay: 0.1s;
+        }
+
+        .hub-card:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .hub-card:nth-child(3) {
+            animation-delay: 0.3s;
+        }
+
+        .hub-card:nth-child(4) {
+            animation-delay: 0.4s;
+        }
+
+        .hub-card:nth-child(5) {
+            animation-delay: 0.5s;
+        }
+
+        .hub-card:nth-child(6) {
+            animation-delay: 0.6s;
+        }
 
         .hub-card::before {
             content: '';
@@ -104,11 +132,29 @@
             transition: width 0.3s ease;
         }
 
-        .card-1::before { background-color: var(--accent-1); }
-        .card-2::before { background-color: var(--accent-2); }
-        .card-3::before { background-color: var(--accent-3); }
-        .card-4::before { background-color: var(--accent-4); }
-        .card-5::before { background-color: var(--accent-5); }
+        .card-1::before {
+            background-color: var(--accent-1);
+        }
+
+        .card-2::before {
+            background-color: var(--accent-2);
+        }
+
+        .card-3::before {
+            background-color: var(--accent-3);
+        }
+
+        .card-4::before {
+            background-color: var(--accent-4);
+        }
+
+        .card-5::before {
+            background-color: var(--accent-5);
+        }
+
+        .card-6::before {
+            background-color: var(--accent-6);
+        }
 
         .hub-card:hover {
             transform: translateY(-5px);
@@ -133,11 +179,29 @@
             background: rgba(255, 255, 255, 0.1);
         }
 
-        .card-1 .card-icon { color: var(--accent-1); }
-        .card-2 .card-icon { color: var(--accent-2); }
-        .card-3 .card-icon { color: var(--accent-3); }
-        .card-4 .card-icon { color: var(--accent-4); }
-        .card-5 .card-icon { color: var(--accent-5); }
+        .card-1 .card-icon {
+            color: var(--accent-1);
+        }
+
+        .card-2 .card-icon {
+            color: var(--accent-2);
+        }
+
+        .card-3 .card-icon {
+            color: var(--accent-3);
+        }
+
+        .card-4 .card-icon {
+            color: var(--accent-4);
+        }
+
+        .card-5 .card-icon {
+            color: var(--accent-5);
+        }
+
+        .card-6 .card-icon {
+            color: var(--accent-6);
+        }
 
         .card-content {
             flex-grow: 1;
@@ -170,13 +234,27 @@
         }
 
         @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         /* Ambient Glow */
@@ -195,9 +273,10 @@
         }
     </style>
 </head>
+
 <body>
     <div class="ambient-glow"></div>
-    
+
     <header class="header">
         <h1 class="title">Pini Hub</h1>
         <p class="subtitle">모든 서비스를 한 곳에서</p>
@@ -212,7 +291,10 @@
                 <p class="card-desc">간편한 카드 내역 관리</p>
             </div>
             <div class="card-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
             </div>
         </a>
 
@@ -224,7 +306,10 @@
                 <p class="card-desc">손쉬운 학원비 관리</p>
             </div>
             <div class="card-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
             </div>
         </a>
 
@@ -236,7 +321,10 @@
                 <p class="card-desc">눈 건강을 위한 루틴</p>
             </div>
             <div class="card-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
             </div>
         </a>
 
@@ -248,7 +336,10 @@
                 <p class="card-desc">매일매일 한자 마스터</p>
             </div>
             <div class="card-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
             </div>
         </a>
 
@@ -260,9 +351,28 @@
                 <p class="card-desc">화학 원소 주기율표</p>
             </div>
             <div class="card-arrow">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
+            </div>
+        </a>
+
+        <!-- Card 6: 점프 게임 -->
+        <a href="https://dashclone-sepia.vercel.app/" class="hub-card card-6" target="_blank" rel="noopener noreferrer">
+            <div class="card-icon">🏃</div>
+            <div class="card-content">
+                <h2 class="card-title">점프 게임</h2>
+                <p class="card-desc">신나는 점프 액션</p>
+            </div>
+            <div class="card-arrow">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
             </div>
         </a>
     </main>
 </body>
+
 </html>
